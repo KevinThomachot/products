@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
        
       productAdd.addEventListener("click", () => {
 
+        let productName2 = [];
+
         let productName1 = document.createElement("li");
         productName1.textContent = product.name;  
         container1.appendChild(productName1);

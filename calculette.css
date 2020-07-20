@@ -1,0 +1,9 @@
+.operation {
+    display: flex;
+    flex-direction: row;
+}
+
+.numeros {
+    display: flex;
+    flex-direction: row;
+}
