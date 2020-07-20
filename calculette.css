@@ -1,9 +1,4 @@
-.operation {
+table {
     display: flex;
-    flex-direction: row;
-}
-
-.numeros {
-    display: flex;
-    flex-direction: row;
+    justify-content: center;
 }
