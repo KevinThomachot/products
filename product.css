@@ -1,0 +1,16 @@
+.container {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container1 {
+    width: 800px;
+    height: 800px;
+}
+
+li {
+    text-align: center;
+    margin: 10%;
+}
