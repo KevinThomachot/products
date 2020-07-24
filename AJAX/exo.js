@@ -2,9 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let request = new XMLHttpRequest();
   request.open("GET", "https://randomuser.me/api/?results=56&nat=us,dk,fr,gb");
   request.send();
-  console.log("récupération synchrone", request.response);
   request.addEventListener("load", (event) => {
-    console.log("récupération asynchrone", JSON.parse(event.target.response));
     let data = JSON.parse(event.target.response);
     function displayUser(user) {
       
@@ -56,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /*document.addEventListener("change", () => {
       let request = new XMLHttpRequest();
-      request.open("GET", "https://randomuser.me/api/?results=56&nat=us,dk,fr,gb");
+      request.open("GET", "https://randomuser.me/api/?results=56&nat=us,dk,fr,gb&gender=female&gender=male");
       request.send();
 
       let container = document.getElementById("container");
@@ -65,16 +63,14 @@ document.addEventListener("DOMContentLoaded", () => {
       container.innerHTML = "";
       data.results.forEach((user) => {
         if (male.checked === true) {
-          (male.checked = user.gender.male)
           displayUser(user);
-        } else if (male.checked === false) {
+        } else if (male.checked ===! false) {
           displayUser(user);
         }
 
         if (female.checked === true) {
-          (female.checked = user.gender.female)
           displayUser(user);
-        } else if (female.checked === false) {
+        } else if (female.checked ===! false) {
           displayUser(user);
         }
       });
